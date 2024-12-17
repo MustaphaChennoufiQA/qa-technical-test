@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",                          
+    "module": "Node16",                       
+    "moduleResolution": "node16",             
+    "esModuleInterop": true,                  
+    "skipLibCheck": true,                     
+    "strict": true,                           
+    "resolveJsonModule": true,                
+    "types": ["cypress", "node"],             
+    "lib": ["es5", "dom"],                   
+    "baseUrl": ".",                                                  
+  },
+  "include": ["**/*.ts"]                      
+}
