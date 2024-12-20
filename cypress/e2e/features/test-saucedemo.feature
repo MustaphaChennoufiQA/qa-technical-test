@@ -63,6 +63,11 @@ Feature:  Saucedemo E-commerce Shopping Workflow
         When I add a product to the cart
         Then the product should be added to the cart
 
+    Scenario: Verify adding multiple products to the cart
+        Given I am on the items page
+        When I add multiple products to the cart
+        Then all selected products should be added to the cart
+        
     Scenario: Verify adding a product to the cart from the item details page
         Given I am on the item details page
         When I add the product to the cart
