@@ -1,0 +1,6 @@
+{
+  "username": "standard_user",
+  "password": "secret_sauce",
+  "invalidUsername": "invalid_standard_user",
+  "invalidPassword": "invalid_secret_sauce"
+}

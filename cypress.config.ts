@@ -5,7 +5,7 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 
 export default defineConfig({
   e2e: {
-    baseUrl: "https://qa-practice.netlify.app",
+    baseUrl: "https://www.saucedemo.com",
     specPattern: '**/*.{feature,cy.ts}',
     async setupNodeEvents(
       on: Cypress.PluginEvents,

@@ -6,30 +6,26 @@ Feature:  Saucedemo E-commerce Shopping Workflow
         And I click the login button
         Then I should be logged in successfully
 
-    Scenario: Verify login with invalid username and invalid password
-        Given I am on the login page
-        When I enter invalid username and invalid password
-        And I click the login button
-        Then I should see an error message
-
     Scenario: Verify all items are displayed on the items page
         Given I am logged in
         When I navigate to the items page
         Then I should see all items displayed
 
     Scenario: Verify the item detail page displays correct information
-        Given I am on the items page
-        When I click on an item
+        Given I am logged in
+        When I am on the items page and I click on an item
         Then I should see the item detail page with correct information
 
     Scenario: Verify adding a product to the cart from the items page
-        Given I am on the items page
-        When I add a product to the cart
+        Given I am logged in
+        When I am on the items page and I add a product to the cart
         Then the product should be added to the cart
 
     Scenario: Verify item quantity, description and price in the cart
-        Given I have products in the cart
-        When I view the cart
+        Given I am logged in
+        When I am on the items page and I add a product to the cart
+        And I have product in the cart
+        And I view the cart
         Then I should see the correct item quantity, description and price
 
     Scenario: Verify adding user information during checkout
@@ -62,3 +58,9 @@ Feature:  Saucedemo E-commerce Shopping Workflow
         Given I am logged in
         When I click the logout button
         Then I should be logged out successfully
+
+    Scenario: Verify login with invalid username and invalid password
+        Given I am on the login page
+        When I enter invalid username and invalid password
+        And I click the login button
+        Then I should see an error message

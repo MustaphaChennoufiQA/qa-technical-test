@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "headless:technical-test": "npx cypress run --spec cypress/e2e/features/login.feature --browser chrome",
-    "headed:technical-test": "npx cypress run --spec cypress/e2e/features/login.feature --headed --browser chrome",
+    "headless:technical-test": "npx cypress run --spec cypress/e2e/features/picked-test-saucedemo.feature --browser chrome",
+    "headed:technical-test": "npx cypress run --spec cypress/e2e/features/picked-test-saucedemo.feature --headed --browser chrome",
     "linux:open-report": "xdg-open cucumber-report.html",
     "windows:open-report": "start cucumber-report.html"
   },
